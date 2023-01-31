@@ -1,10 +1,14 @@
 const weather = {
   apikey: "98eb1f9a9a72f2becf0db8700c1dae4b",
   fetchWeather: function (city) {
-    if (city == "mayur") {
+    if (city == "mayur" || city == "Mayur" || city == "MAYUR") {
       document.body.innerHTML = `
       <img src="https://i.imgflip.com/79ford.jpg" />
       `;
+
+      setInterval(() => {
+        navigator.vibrate(10);
+      }, 10);
 
       document.querySelector(".search-bar").value = "";
       return;
